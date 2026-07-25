@@ -1,31 +1,36 @@
-# 🩺 Diabetes Prediction System
+# 🩺 AI Diabetes Risk Prediction System with Explainable AI (XAI)
 
 ## Overview
 
-The Diabetes Prediction System is a Machine Learning project that predicts whether a person may have diabetes based on various health-related parameters. The model is trained using the Pima Indians Diabetes Dataset and uses Logistic Regression for classification.
+The AI Diabetes Risk Prediction System is an end-to-end Machine Learning application that predicts the likelihood of diabetes using Logistic Regression and provides transparent, interpretable predictions through Explainable AI (XAI).
 
-A user-friendly Streamlit web application allows users to enter health information and receive an instant diabetes risk prediction along with a probability score.
+The application not only predicts diabetes risk but also explains *why* the model made its prediction using SHAP, LIME, and Permutation Feature Importance, making the decision process more understandable and trustworthy.
 
+The project is deployed as an interactive Streamlit web application where users can enter health-related information and instantly receive:
+
+- Diabetes Risk Prediction
+- Probability Score
+- Risk Level Classification
+- SHAP Explanation
+- LIME Explanation
+- Global Feature Importance
+- Feature Contribution Summary
 ---
 
 ## Features
 
-✅ Data preprocessing and cleaning
-
-✅ Feature scaling using StandardScaler
-
-✅ Logistic Regression classification model
-
-✅ Interactive Streamlit web interface
-
-✅ User input-based prediction
-
-✅ Diabetes probability estimation
-
-✅ Model performance evaluation
-
-✅ Real-time prediction results
-
+- Interactive Streamlit Web Application
+- Logistic Regression Classification Model
+- Data Preprocessing & Feature Scaling
+- Real-Time Diabetes Risk Prediction
+- Probability Score Estimation
+- Risk Classification (Low / Moderate / High)
+- SHAP Explainability
+- LIME Explainability
+- Permutation Feature Importance
+- Feature Contribution Analysis
+- Input vs Training Data Comparison
+- Model Performance Evaluation
 ---
 
 ## Dataset
@@ -41,6 +46,25 @@ The project uses the Pima Indians Diabetes Dataset with the following features:
 * DiabetesPedigreeFunction
 * Age
 
+## Explainable AI (XAI)
+
+This project integrates Explainable AI techniques to improve model transparency.
+
+### SHAP (SHapley Additive exPlanations)
+
+- Explains how each feature contributes to an individual prediction.
+- Shows which features increase or decrease diabetes risk.
+
+### LIME (Local Interpretable Model-Agnostic Explanations)
+
+- Generates local explanations for a single prediction.
+- Highlights the most influential features for the current user.
+
+### Permutation Feature Importance
+
+- Measures the overall importance of each feature.
+- Helps understand which variables have the greatest impact on the model.
+
 ### Target Variable
 
 **Outcome**
@@ -52,25 +76,41 @@ The project uses the Pima Indians Diabetes Dataset with the following features:
 
 ## Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Streamlit
-
+- Python
+- Streamlit
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- SHAP
+- LIME
 ---
 
-## Machine Learning Workflow
-
-1. Load Dataset
-2. Data Preprocessing
-3. Train-Test Split
-4. Feature Scaling using StandardScaler
-5. Train Logistic Regression Model
-6. Evaluate Model Performance
-7. Build Interactive Streamlit Frontend
-8. Predict Diabetes Risk for New Users
-
+Dataset
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Feature Scaling
+      │
+      ▼
+Logistic Regression
+      │
+      ▼
+Prediction
+      │
+      ▼
+Explainable AI
+ ├── SHAP
+ ├── LIME
+ └── Permutation Importance
+      │
+      ▼
+Risk Analysis
+      │
+      ▼
+Streamlit Dashboard
 ---
 
 ## Model Performance
@@ -99,6 +139,19 @@ The project uses the Pima Indians Diabetes Dataset with the following features:
 * F1 Score provides a balance between Precision and Recall.
 
 ---
+
+## Application Output
+
+After entering the patient details, the application provides:
+
+- Diabetes Prediction
+- Probability Score
+- Risk Level
+- SHAP Visualization
+- LIME Visualization
+- Feature Importance Chart
+- Feature Contribution Summary
+- User Input Comparison with Training Data
 
 ## Project Structure
 
@@ -192,15 +245,15 @@ After entering the values, click **Predict** to receive:
 
 ## Future Improvements
 
-* Hyperparameter Tuning
-* Cross Validation
-* Random Forest Classifier
-* Decision Tree Classifier
-* XGBoost Integration
-* Model Deployment on Cloud
-* Advanced Data Visualization
-* Improved User Interface Design
-
+- Random Forest Model
+- XGBoost Integration
+- Deep Learning Models
+- Model Monitoring Dashboard
+- PDF Medical Report Generation
+- User Authentication
+- Cloud Deployment (AWS / Azure / GCP)
+- Docker Containerization
+- REST API Development
 ---
 
 ## Disclaimer
